@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- App title -->
+<title>CV (Menuvb3)</title>
+
+<!-- General -->
+<style> 
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/*dark grey #36383F / pearl white #FFFEFC/   */
+:root{
+--white: #FFFEFC;
+--grey2: #f9f9f9;
+--grey1: #85888C;
+--blue: #333;    
+}
+/* Reset */
+    
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+  
+.header {
+      background-color: #f1f1f1;        
+    }    
+.header-text {
+        text-align: center;
+        font-size: 35px;        
+        }      
+    
+/*========= MOBILE =========*/
+@media (max-width: 600px) {    
+.header{
+background-color: orange;
+position: sticky;
+top: 0;
+height: 211px;    
+width: 100%; }
+    
+/* Mobile Nav menu */
+.nav         {
+width: 80%;
+height: 30%;
+position: fixed;
+background-color: var(--grey2);
+overflow: hidden;
+max-height: 0;
+transition: max-height .9s ease-out;
+    }
+/* NAV MENU BackGround*/    
+a            {text-decoration: none;}     
+.menu a      {
+display: block;
+padding: 11px 50px;
+color: #333; }
+.menu a:hover{
+background-color: grey;
+color: red;   
+font-size: 32px;    
+}
+
+/* Mobile MENU ICON */
+/* Hamburger Line Icon */
+.hamburger      {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px; }
+.hamburger-line {
+    background: var(--grey1);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px; }
+.hamburger-line::before, .hamburger-line::after{
+    background: var(--grey1);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;}
+.hamburger-line::before{top:5px;} .hamburger-line::after{top:-5px;}
+/* Mobile Toggle menu icon */
+.side-menu:checked ~ nav{ max-height: 100%;}
+.side-menu:checked ~ .hamburger .hamburger-line { background: transparent; }
+.side-menu:checked ~ .hamburger .hamburger-line::before { 
+transform: rotate(-45deg); top:0; 
+}
+.side-menu:checked ~ .hamburger .hamburger-line::after  {
+transform: rotate(45deg); top:0;
+}
+    }
+ 
+
+/*========= DESKTOP =========*/    
+@media (min-width: 601px) {     
+/*.nav{display: none;} */
+.header{
+background-color:#FFFEFC;
+position: sticky;
+top: 0;
+height: 111px;    
+width: 100%; }    
+.nav{     
+    display:;
+    top: 0;
+    max-height:fit-content;
+    position: relative;
+    float:left;
+    width: fit-content;
+    background-color: ;     
+    }
+ul      {list-style: none;}
+li {
+    float: left;
+}        
+.menu a{
+display: block;   
+padding: 11px 50px;
+color: var(--grey1); 
+text-decoration: none;
+}
+    
+.menu a:hover{
+background-color:#fafafa;
+color:#333; 
+text-decoration: underline;  
+font-size: 19px;  
+transition: all 0.1s ease-out;    
+}
+       
+} 
+
+    
+/* ============= GENERAL============ */
+.side-menu {display: none;      
+h1, p   {color: green;}    
+ 
+ul      {list-style: none;}
+   
+
+    
+</style>
+
+<!-- Desktop grid  -->
+<style>
+    
+/*body {font-family: Arial, Helvetica, sans-serif;} */
+
+/* Style the header */
+.headerx {
+    grid-area: header;
+    padding: 0 110px;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 35px;
+    }
+
+/* The grid container */
+.grid-container {
+    padding: 0 1%;
+    display: grid;
+    grid-template-areas: 
+    'header header header header' 
+    'left left middle middle'
+    ' right right right right' 
+    'footer footer footer footer ';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+    } 
+.left, .middle, .right {
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    }
+/* Style the left column */
+.left {
+    grid-area: left;
+}
+/* Style the middle column */
+.middle {
+    grid-area: middle;
+}
+/* Style the right column */
+.right {
+    grid-area: right;
+}
+/* Style the footer */
+.footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    }
+    
+.dada {
+    padding:1%;    
+    }    
+   
+.cvName {
+    padding: 0 2%;        
+    }   
+
+.lineStyle{ 
+    color:;
+    background:;
+    width:150px;
+    height:;}    
+div p.videoClipBig { display:;}
+div p.videoClipSmall { display:none}    
+    
+</style>
+
+
+<!--Mobile grid -->
+<style>
+@media (max-width: 801px) {     
+/*body {font-family: Arial, Helvetica, sans-serif;} */
+
+/* Style the header */
+.headerx {
+    grid-area: header;
+    padding: 110px;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 35px;
+    }
+
+/* The grid container */
+.grid-container {
+    padding: 0 1%;
+    font-size: 14px;
+    display: grid;
+    grid-template-areas: 
+    'header ' 
+    'left' 
+    'middle'
+    ' right' 
+    'footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+    } 
+.left, .middle, .right {
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+    }
+/* Style the left column */
+.left {
+    grid-area: left;
+}
+/* Style the middle column */
+.middle {
+    grid-area: middle;
+}
+/* Style the right column */
+.right {
+    grid-area: right;
+}
+/* Style the footer */
+.footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 0px;
+    text-align: center;
+    }
+    
+.dada {
+    padding:1%;    
+    }    
+.cvName {
+    padding: 0 15px;        
+    } 
+.lineStyle{ 
+    color:;
+    background:;
+    width:129px;
+    height:;}  
+div p.videoClipBig { display: none}
+div p.videoClipSmall { display:}
+    
+}       
+    
+</style>
+
+
+
+</head>
+<body>
+
+<!-- Navigation bar -->
+<header class="header">
+<!-- Hamburger icon + hidden -->
+<input class="side-menu" type="checkbox" id="side-menu"/>
+<label class="hamburger" for="side-menu">
+<span class="hamburger-line"></span>
+</label>
+<!-- Menu -->
+<nav class="nav">
+    <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a> </li>
+    <li><a href="cvX.html">Cv</a></li>
+    <li><a href="contact.html">Contact</a></li>    
+    </ul>
+</nav>
+<br><br><br><br>
+  <div class="header-text">
+    <p style="font-size: 23px;font-weight:600px"> CV </p>    
+   
+  </div> 
+</header> 
+
+      
+<!--MAIN CONTENT  #FBFBF9 #FBFBF9 -->   
+<br><br><br><br><br>
+<p class="cvName" style="padding: 5% 2%;background: #FBFBF9; ">
+Joe.F.T. Ponto <br>
+<em>Amsterdam
+<br>
+burstimages@hotmail.com
+<br>
+www.ads.com
+</em>
+<br><br>
+Collective 
+<br>
+<em>
+www.burst-tv.org
+<br>
+ponto@burst-tv.org
+</em></p>
+<br><br>
+ 
+<div class="grid-container">
+<div class="left"   style="background-color:#FFFEFC;">
+<b> Column1 Opleiding </b><br>
+1997-1998 Artistieke bedrijfsvoering, BBK Amsterdam 
+<br>
+1990-1993 Experimental Film and Photography, Vrije Academie, The Hague
+<br>
+1989-1992 Direction, production, editing, internal training for "Stads-TV" The Hague
+<br>
+1982-1985 Social Academy, Haagse Hoge school, The Hague
+<br><br><br>
+</div>
+<div class="middle" style="background-color:#FFFEFC;">
+
+<b>Column2 Disciplines</b>
+<br>
+Web skills: Front-end HTML, CSS
+<br>
+Web-3D programming skills: JS, three-js, Babylon js  
+<br><br>
+AV skills: Montage, director, camera
+<br>
+Photography skills: Studio and Fashion Photography, Studio light
+<br><br>
+2D skills: Photoshop
+<br>
+3D Skills: CGI, Motion Graphic design, Combustion, Cinema4D, Blender, Zbrush
+<br><br><br><br>
+</div>
+<!--max-width-740px is voor mobile txt flow-->
+<div class="right"  style="background-color:#FFFEFC;max-width:740px">
+
+<b>Awards and grants</b>
+<br>
+STROOM (stroom.nl), stimulation fund, 1999 and 2001  
+<br>
+Performing Arts Fund NL (fondspodiumkunsten.nl), research & development (pre-production) in New York, co-production with Battery dance company (NY)
+<br>
+<!--Mondriaan <br>-->
+Winner "Grote prijs van Nederland", Paradiso, Amsterdam 
+<br><br><br>
+
+
+<b>Column3 work</b> 
+<br>
+(ik heb werk gemaakt onder eigen naam als Burstimages en als lid van het collectief het Burst-tv Londen.  
+Gemakshalve zal ik achter die werk beschrijvingen 
+"in association- in collaboration" with Burst-tv Londen vermelden).
+<br>
+Various work in cooperation with burst-tv Londen 
+<br><br><br>
+
+
+<b>2022-2019 </b> 
+<br>
+- Web-3D (immersive web) Research, development and programming. 
+<br>
+<br>
+
+<b>2022 - lopende producties / In progress </b>
+<br>
+- Diverse webdesign ontwikkelingen met web 3D    
+<br>
+- DROOM - Experimentele video film over het onderbewustzijn UNTITLED <br>
+- Video 3 luik installatie (dmv VJ technieken) voor openlucht vertoning.<br>
+<br><br>
+
+
+<b>Artistic work till 2019</b>
+<hr class="lineStyle" style="color:#f9f9f9;background:;width:;height:0.01px;" ;>  
+<br><br>
+<b>Theater, video omgevingen en videoperformance </b>
+<br>
+-Videocollages aan de Wand - voor kunsstichting Stroom in Theater aan Het Spui te Den Haag
+<br>
+-videoinstallatie "The Will to Build" - Hong Kong City Theatre, i.s.m Burst-TV Londen
+<br>
+-videoinstallatie "Gaddafi" - English National Opera (uk), i.s.m. Burst-TV Londen
+
+<br><br>
+<b>Brands</b>
+<br>
+Videowerk "Fashion Night" NRJ in association with Burst-tv londen , Zurich
+<br><br>
+
+
+<b>TV en Internet</b>
+<br>
+Videoclip"Blaka aye e trowe watra" Dee Denise, Surinaamse TV <br>
+Experimentele Docu drama, Dream your Utopia<br>
+2D animatie product promotie, kerstkaart animatie, Irepairshop
+<br><br>
+
+<b>Photo work</b><br>
+Paasen Afrikaanse kerkdienst, Heilig Hart, Antwerpen <br>
+Poster New Opera Hero i.s.m. Burst-tv<br>
+<br><br>
+
+
+<b>Artistic work till 2011</b>
+<hr class="lineStyle" style="color:#f9f9f9;background:;width:;height:0.01px;" ;> 
+<br><br>
+
+
+<b>Theater video-omgevingen videoperformance</b>
+<br>
+-Videodecor voor Battery Dance Company, NewYork 
+<br>
+-multimedia ondersteuning "Buitenland Event", Amsterdam 
+<br>
+-VJ "Common Subroutine", Korzo Theater, Den Haag
+<br>
+-VJ en video environment "Korzo 15 years anniversary" alle zalen Korzo theater, Den Haag.
+<br>
+-VJ voor "Mantronix", Scala Theatre, London
+<br>
+-VJ "T twentieth just left the building", Scala Theatre, London 
+<br>
+-VJ voor opening Arti Mediare galerie North Sea Jazz Festival, Den Haag
+<br><br>
+
+
+<b>Galerie en openbare ruimtes</b>
+<br>
+-Multi Media installatie voor opening van gebouw "De Serre" stadsdeel Oost, Amsterdam
+<br>
+-Video environment, "JML is 50", Visafslag, Den Haag 
+<br>
+-Videoinstallatie "Rood, Tijd, Antwoord" Suggesteron, Heemstede
+<br>
+-Videowerk "Rad Art", Lafayet, Parijs
+<br>
+-Videoinstallatie "De Haagse rondgang", Pulchri galerie, Den Haag
+<br>
+-Videoperformance "Trash behaviour" CBGB Galerie, New York 
+<br>
+-Videoperformance openingsexpositie Provinciehuis, Den Haag 
+<br>
+-Videowerk, jaarlijkse presentatie Diesel HQ, met G.Mul; Jesolo 
+<br>
+-Video objecten, "Korzo 15 jr anniversary" Korzo, Den Haag 
+<br>
+-Videoinstallatie North Sea Jazz Festival, Den Haag
+<br>
+-Videowerk "Sound", museum Entourage, Vianen
+<br>
+-Videowerk "Eten" i.s.m. Geert Mul, Kasteel Hoensbroek 
+<br>
+-Videoinstallatie "Business as usual", galerie 1646, Den Haag
+<br><br>
+
+
+<b>TV en Internet</b>
+<br> 
+-Leader voor het TV programma kunstlicht Next uitzending op Nederland 2 Producer NOB/Teleac en Frame Media<br>
+-Manga animatie voor Streetlife event organisatie CC4U <br>
+<p class="videoClipBig">
+-Videoclip "Direct Disko" zomerhit 2001 MTV/TMF Benelux, featering Dj Marchello, Samwel, 
+Onerzes B,
+<br>&nbsp; Mark Van Dale, Eric De Koning & Guido Pernet. Producer Rhytm Import (NL). 
+</p> 
+
+<p class="videoClipSmall">
+-Videoclip "Direct Disko" zomerhit 2001 MTV/TMF Benelux, featering Dj Marchello, Samwel, 
+Onerzes B, Mark Van Dale, Eric De Koning & Guido Pernet. Producer Rhytm Import (NL). 
+</p>
+-Internet film PriceWaterhouseCoopers London
+<br><br>    
+
+<b>Brands</b>
+<br>
+-Videoanimatie voor Reebok, club Magazinne Generali, Milaan 
+<br>
+-VJ werk Motorola/MTV in Hannover Cebit hallen 
+<br>
+-Videoanimatie en VJ werk FHM 100 sexiest Amsterdam 
+<br>
+-Videowerk en VJ werk "zomer presentatie" H.Q. Diesel, Verona 
+<br>
+-Videowerk MTV "Future show" Beurs Hal, Bologna 
+<br>
+-Videoanimatie Vodafone, "Summer live" Martina, It 
+<br>
+-Videoanimatie en VJ werk "RBK launch" Reebok, Milaan 
+<br>
+-Videoanimatie,VJ werk"Everland" Internal presentation, H.Q. MTV, Milaan
+<br>
+-Videoanimatie en VJ werk, NVM presentatie NBC, Nieuwegein 
+<br>
+-VJ werk presentatie planet hollywood Planet Motorola, A'dam
+<br><br>
+<b>Festivals en evenementen</b>
+<br>
+-Rotterdam club Watt i.s.m DJ Shook AV performance
+<br>
+-Pet Shop Boys Tour i.s.m. Burst-tv video
+<br>
+-Videoinstallatie en VJ werk, Final Cal Contest Pirelli Milaan
+<br>
+-Videoinstallatie "China Finals DMC Technics",Warehouse Shanghai
+<br>
+-Videoinstallatie Openair advertisement festival Haibun, Cannes 
+<br>
+-Videoanimatie Annual awards Imagination filmfest.IFF Speed New York
+<br>
+-VJ installatie "Celluloidsnights livestock" Brick house Londen 
+<br>
+-VJ werk en organisatie, cultureel VJ evenement,Dagmart Den Haag 
+<br>
+-VJ werk "Noth sea jazz Festival", Paulus Potter zaal, (2001) Den Haag 
+<br>
+-VJ werk "Portobello road festival Asian nights" Portobello, Londen
+<br>
+-Videoinstallatie 3 Dagen "Mooving & Grooving" Noth sea jazz
+Festival, Paulus Potter zaal, (2000) Den Haag
+<br>
+-VJ werk "Drum rhytm festival" Westergas fabriek, Amsterdam 
+<br>
+-Video environment, "Millanium quake event" Game point/NOB, MES studio, Hilversum.
+<br>
+-VJ werk, "MS Stubnitz Terotainment" tijdens parade,Rotterdam 
+<br>
+-VJ Werk, winnaar Grote prijs van Nederland i.s.m Longplayers Paradiso, Amsterdam
+<br>
+-VJ werk "Spinning wheels" Noth sea jazz festival Paulus potterzaal, (1999) Den Haag 
+<br>
+-VJ werk "India tent" Low Lands festival Biddinghuizen 
+<br>
+-VJ werk Krypthon stage Drum Rhytm Westergas fabriek Amsterdam 
+<br>
+-VJ werk "D Night 10 jr nighttown" Ahoi, Rotterdam 
+<br>
+-VJ werk "Game point" Congres gebouw, Den Haag 
+<br>
+-VJ werk "Titanic boot trip" DEAF Festival, Rotterdam
+<br><br>
+
+<b>Lezingen</b>
+<br>
+-Lezing VJ videopresentatie, Grafische Academie, Amsterdam <br>
+-VJ werk "De Vonk Studium Generale" voorstudie i.s.m. Kunstenaar Klaas Haagse Kunst Academie, Den Haag 
+<br><br><br>
+
+<b>Clubs VJ Video-environment </b>
+<br>
+-Videoinstallatie "Pangea" organisatie CC4U, Den Haag -VJ werk, club Spice, New York
+<br>
+-VJ werk, club Tunnel, New York
+<br>
+-VJ werk, Lounge party, vibe bar, Londen
+<br>
+-Vj werk Tarantula, K Tour, Diverse Clubs, Moskou
+<br>
+-VJ werk, Tarantula, K Tour, club Propaganda, Sint Petersburg 
+<br>
+-Video environment "Lego" organisatie Drum&Feest, Paard, Den Haag
+<br>
+-VJ werk "Vibe bar anniversary" Vibe bar, Londen
+<br>
+-VJ werk, Resident VJ  2000-2003 voor MTV Italy
+<br>
+-Video, "one night zeroquattrouno" MTV, omni planet, Milaan 
+<br>
+-Video,"MTV one night", MTV Lounge party's,div steden Italie 
+<br>
+-Videowerk, MTV one night MTV launge party, Rome
+<br>
+-VJ environment "You are the star" club de Sade, Milaan 
+<br>
+-Videowerk "Notiorius" MTV & Playstation Torino (It)
+<br>
+-VJ werk Drum en Feest organisatie div.feesten, Paard , Den Haag
+<br>
+-VJ werk, "Dutz Breakz", Paradiso, Amsterdam
+<br>
+-VJ werk, New Years Party, i.s.m. VJ J.P. Nighttown, Rotterdam 
+<br>
+-Video environment "opening dagmart" voor Drum&Feest organisatie, Dagmart, Den Haag
+<br>
+-VJ werk "Farewell 2000" 169 resident New York
+<br>
+-VJ werk "Touched by a DJ" Liquid New York
+<br>
+-VJ werk"div. events weekend"basement,Nighttown, Rotterdam 
+<br>
+-VJ installatie, "Grand gala du Funque" , Paard, Den Haag
+<br>
+-VJ werk"Dutch Unit Media Base multi disciplinaire events", Delft
+<br>
+-Videoinstallatie/performance "the womb" Roxy, Amsterdam               
+<br>           
+ <br><br><br><br>
+</div>  
+</div> 
+
+<!-- Footer-->
+<div class="footer" style="width: 100%; height: 150px">
+<p></p>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- App title -->
+<title>CONTACT</title>
+
+<!-- General -->
+<style> 
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/*dark grey #36383F / pearl white #FFFEFC/   */
+:root{
+--white: #FFFEFC;
+--grey2: #f9f9f9;
+--grey1: #85888C;
+--blue: #333;    
+}
+/* Reset */  
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+} 
+.header {
+      background-color: #f1f1f1;        
+    }    
+.header-text {
+        text-align: center;
+        font-size: 35px;        
+        }      
+    
+/*========= MENU MOBILE =========*/
+@media (max-width: 600px) {    
+.header{
+background-color: orange;
+position: sticky;
+top: 0;
+height: 211px;    
+width: 100%; }
+    
+/* Mobile Nav menu */
+.nav         {
+width: 80%;
+height: 30%;
+position: fixed;
+background-color: var(--grey2);
+overflow: hidden;
+max-height: 0;
+transition: max-height .9s ease-out;
+    }
+/* NAV MENU BackGround*/    
+a            {text-decoration: none;}     
+.menu a      {
+display: block;
+padding: 11px 50px;
+color: #333; }
+.menu a:hover{
+background-color: grey;
+color: red;   
+font-size: 32px;    
+}
+
+/* Mobile MENU ICON */
+/* Hamburger Line Icon */
+.hamburger      {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px; }
+.hamburger-line {
+    background: var(--grey1);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px; }
+.hamburger-line::before, .hamburger-line::after{
+    background: var(--grey1);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;}
+.hamburger-line::before{top:5px;} .hamburger-line::after{top:-5px;}
+/* Mobile Toggle menu icon */
+.side-menu:checked ~ nav{ max-height: 100%;}
+.side-menu:checked ~ .hamburger .hamburger-line { background: transparent; }
+.side-menu:checked ~ .hamburger .hamburger-line::before { 
+transform: rotate(-45deg); top:0; 
+}
+.side-menu:checked ~ .hamburger .hamburger-line::after  {
+transform: rotate(45deg); top:0;
+}
+    }
+ 
+
+/*========= MENU DESKTOP =========*/    
+@media (min-width: 601px) {     
+/*.nav{display: none;} */
+.header{
+background-color:#FFFEFC;
+position: sticky;
+top: 0;
+height: 111px;    
+width: 100%; }    
+.nav{     
+    display:;
+    top: 0;
+    max-height:fit-content;
+    position: relative;
+    float:left;
+    width: fit-content;
+    background-color: ;     
+    }
+ul      {list-style: none;}
+li {
+    float: left;
+}        
+.menu a{
+display: block;   
+padding: 11px 50px;
+color: var(--grey1); 
+text-decoration: none;
+}  
+.menu a:hover{
+background-color:#fafafa;
+color:#333; 
+text-decoration: underline;  
+font-size: 19px;  
+transition: all 0.1s ease-out;    
+}     
+} 
+
+    
+/* ============= GENERAL============ */
+.side-menu {display: none;      
+h1, p   {color: green;}    
+ul      {list-style: none;}
+   
+
+    
+</style>
+
+<!-- GRID DESKTOP -->
+<style> 
+/*body {font-family: Arial, Helvetica, sans-serif;} */
+
+/* Style the header */
+.header1 {
+    grid-area: header1;
+    padding: 0 110px;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-size: 35px;
+    }
+    
+ 
+/* GRID CONTAINER */
+.grid-container {
+    padding: 0 1%;
+    display: grid;
+    grid-template-areas: 
+    'header1 header1 header1 header1 header1 header1'
+        
+    'tussen0 tussen0 tussen0 tussen0 tussen0 tussen0'          
+    'left1 left1 middle1 middle1 right1 right1'
+    'left2 left2 middle2 middle2 right2 right2'         
+    'left3 left3 middle3 middle3 right3 right3'
+        
+    'tussen1 tussen1 tussen1 tussen1 tussen1 tussen1'    
+    'left4 left4 middle4 middle4 right4 right4'
+    'left5 left5 middle5 middle5 right5 right5' 
+        
+    'tussen2 tussen2 tussen2 tussen2 tussen2 tussen2 '    
+    'left6 left6 middle6 middle6 right6 right6'
+    'left7 left7 middle7 middle7 right7 right7'
+        
+    'tussen3 tussen3 tussen3 tussen3 tussen3 tussen3 '          
+    'left8 left8 middle8 middle8 right8 right8'
+    'left9 left9 middle9 middle9 right9 right9'        
+        
+    'footer footer footer footer footer footer ';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+    } 
+.left1, .middle1, .right1, .left2, .middle2, .right2
+.left3, .middl3, .right3 .left4, .middl4, .right4 
+.left5, .middl5, .right5 .left6, .middl6, .right6    {
+    padding: 0px;
+/*    dit werkt niet*/
+/*    height: 100%;  Should be removed. Only for demonstration */
+    }
+    
+    
+.tussen0  {
+    grid-area: tussen0;
+    width: 100vw; 
+    height: 120px;
+    text-align: center;
+}  
+ 
+ 
+    
+/* Style the left column */
+.left1 {
+    grid-area: left1;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle1 {
+    grid-area: middle1;
+    width: 33vw;
+}
+/* Style the right column */
+.right1 {
+    grid-area: right1;
+    width: 33vw;
+}
+/* Style the footer */
+    
+ /* Style the left column */
+.left2 {
+    grid-area: left2;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle2 {
+    grid-area: middle2;
+    width: 33vw;
+}
+/* Style the right column */
+.right2 {
+    grid-area: right2;
+    width: 33vw;
+}
+/* Style the footer */
+    
+  /* Style the left column */
+.left3 {
+    grid-area: left3;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle3 {
+    grid-area: middle3;
+    width: 33vw;
+}
+/* Style the right column */
+.right3 {
+    grid-area: right3;
+    width: 33vw;
+}
+/* Style the footer */
+
+.tussen1  {
+    grid-area: tussen1;
+    width: 100vw; 
+    height: 120px;
+    text-align: center;
+}  
+ 
+    
+  /* Style the left column */
+.left4 {
+    grid-area: left4;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle4 {
+    grid-area: middle4;
+    width: 33vw;
+}
+/* Style the right column */
+.right4 {
+    grid-area: right4;
+    width: 33vw;
+}
+/* Style the footer */
+
+   
+  /* Style the left column */
+.left5 {
+    grid-area: left5;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle5 {
+    grid-area: middle5;
+    width: 33vw;
+}
+/* Style the right column */
+.right5 {
+    grid-area: right5;
+    width: 33vw;
+}
+/* Style the footer */
+
+    
+.tussen2  {
+    grid-area: tussen2;
+    width: 100vw; 
+    height: 120px;
+    text-align: center;
+}  
+     
+    
+  /* Style the left column */
+.left6 {
+    grid-area: left6;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle6 {
+    grid-area: middle6;
+    width: 33vw;
+}
+/* Style the right column */
+.right6 {
+    grid-area: right6;
+    width: 33vw;
+}
+/* Style the footer */
+  
+  /* Style the left column */
+.left7 {
+    grid-area: left7;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle7 {
+    grid-area: middle7;
+    width: 33vw;
+}
+/* Style the right column */
+.right7 {
+    grid-area: right7;
+    width: 33vw;
+}
+/* Style the footer */
+ 
+.tussen3  {
+    grid-area: tussen3;
+    width: 100vw; 
+    height: 120px;
+    text-align: center;
+}  
+  
+    
+  /* Style the left column */
+.left8 {
+    grid-area: left8;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle8 {
+    grid-area: middle8;
+    width: 33vw;
+}
+/* Style the right column */
+.right8 {
+    grid-area: right8;
+    width: 33vw;
+}
+/* Style the footer */
+ 
+  /* Style the left column */
+.left9 {
+    grid-area: left9;
+    width: 33vw;    
+}
+/* Style the middle column */
+.middle9 {
+    grid-area: middle9;
+    width: 33vw;
+}
+/* Style the right column */
+.right9 {
+    grid-area: right9;
+    width: 33vw;
+}
+/* Style the footer */
+     
+    
+.footer {
+    grid-area: footer;
+    background-color: #f1f1f1;
+    padding: 0px;
+    text-align: center;
+    }    
+.dada {
+    padding:1%;    
+    }    
+.cvName {
+    padding: 0 2%;        
+    }   
+
+.lineStyle{ 
+    color:;
+    background:;
+    width:150px;
+    height:;}    
+div p.videoClipBig { display:;}
+div p.videoClipSmall { display:none}    
+    
+</style>
+
+
+<!--Mobile grid -->
+<style>
+@media (max-width: 800px) {    
+.header{
+background-color: orange;
+position: sticky;
+top: 0;
+height: 211px;    
+width: 100%; }
+    
+/* Mobile Nav menu */
+.nav         {
+width: 80%;
+height: 30%;
+position: fixed;
+background-color: var(--grey2);
+overflow: hidden;
+max-height: 0;
+transition: max-height .9s ease-out;
+    }
+/* NAV MENU BackGround*/    
+a            {text-decoration: none;}     
+.menu a      {
+display: block;
+padding: 11px 50px;
+color: #333; }
+.menu a:hover{
+background-color: grey;
+color: red;   
+font-size: 32px;    
+}
+
+/* Mobile MENU ICON */
+/* Hamburger Line Icon */
+.hamburger      {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px; }
+.hamburger-line {
+    background: var(--grey1);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px; }
+.hamburger-line::before, .hamburger-line::after{
+    background: var(--grey1);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;}
+.hamburger-line::before{top:5px;} .hamburger-line::after{top:-5px;}
+/* Mobile Toggle menu icon */
+.side-menu:checked ~ nav{ max-height: 100%;}
+.side-menu:checked ~ .hamburger .hamburger-line { background: transparent; }
+.side-menu:checked ~ .hamburger .hamburger-line::before { 
+transform: rotate(-45deg); top:0; 
+}
+.side-menu:checked ~ .hamburger .hamburger-line::after  {
+transform: rotate(45deg); top:0;
+}
+    }   
+</style>
+
+
+
+</head>
+<body>
+
+<!-- Navigation bar -->
+<!-- Navigation bar -->
+<header class="header">
+<!-- Hamburger icon + hidden -->
+<input class="side-menu" type="checkbox" id="side-menu"/>
+<label class="hamburger" for="side-menu"><span class="hamburger-line"></span></label>
+<!-- Menu -->
+<nav class="nav">
+    <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a> </li>
+    <li><a href="cvX.html">Cv</a></li>
+    <li><a href="contact.html">Contact</a></li>    
+    </ul>
+</nav>
+<br><br><br><br>
+  <div class="header-text">
+    <p style="font-size: 23px;font-weight:600px"> CONTACT </p>    
+   
+  </div> 
+</header> 
+   
+   
+<!--MAIN CONTENT  #FBFBF9 #FBFBF9 -->   
+<br><br><br><br><br>
+<p class="cvName" style="padding: 5% 2%;background: #FBFBF9; ">
+Joe.F.T. Ponto <br>
+<em>Amsterdam
+<br>
+burstimages@hotmail.com
+<br>
+www.ads.com
+</em>
+<br><br>
+Collective 
+<br>
+<em>
+www.burst-tv.org
+<br>
+ponto@burst-tv.org
+</em></p>
+<br>
+ 
+<div class="grid-container">
+
+<div class="tussen0"  style="background-color:#FFFEFC;"> 
+<br><br><br>       
+<b><p>  </p></b>
+</div>
+  
+<div class="left1"   style="background-color:#FFFEFC;">
+ 
+<b>   </b>
+</div>
+<div class="middle1" style="background-color:#FFFEFC">    
+<b> </b>
+</div>  
+<div class="right1"  style="background-color:#FFFEFC;">           
+<b>  </b>
+</div>
+ 
+<div class="tussen1"  
+style="background-color:#FFFEFC;width: 100%; height: 450px"> 
+<br><br><br>       
+<b><p> .</p></b>
+</div>
+ 
+<div class="dada">    
+<p> make item cursief door <<em>> grid-area << / em >  te gebruiken: 
+<br> voorbeeld: <em>grid-area</em> 
+</p>
+  		  		
+<h3 style="background: #fffefc">95%	Porcelain  HEX #FFFEFC</h3> 
+<h3 style="background: #fbfbf9">95%	Bright White HEX #FBFBF9</h3>
+<h3 style="background: #f9fbf9">95%	Bright White HEX #F9FBF9</h3>
+
+ 
+<br>  
+<h3 style="background: #f9f9f9">95%	#f9f9f9</h3>
+<h3 style="background: #f8f8f8">95%	#f8f8f8</h3>
+<h3 style="background: #f7f7f7">95%	#f7f7f7</h3>
+<h3 style="background: #f6f6f6">95%	#f6f6f6</h3>
+<h3 style="background: #f5f5f5">95%	#f5f5f5</h3>
+<h3 style="background: #f4f4f4">95%	#f4f4f4</h3>
+<h3 style="background: #f3f3f3">95%	#f3f3f3</h3>
+<h3 style="background: #f2f2f2">95%	#f2f2f2</h3>
+<h3 style="background: #f2f2f2">95%	#f1f1f1</h3>
+<h3 style="background: #f0f0f0">95%	#f0f0f0</h3>
+
+<br><br><br><br><br><br>
+</div>  
+</div>  
+ 
+<!-- Footer-->
+<div class="footer" style="width: 100%; height: 150px">
+<p></p>
+</div>
+
+
+ 
+</body>
+</html>
